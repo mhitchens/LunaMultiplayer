@@ -1,4 +1,4 @@
-FROM eclipse/dotnet_core
+FROM mono:latest
 
 ENV LMP_URL https://luna-endpoint.glitch.me/latest
 ENV LMP_REPO_UPDATE https://luna-endpoint.glitch.me/update
@@ -7,7 +7,6 @@ RUN set -ex \
 && sudo apt-get update \
 && sudo apt-get install -y \
     tzdata \
-    mono-devel \
     zip \
     curl \
 && sudo curl -Ss $LMP_REPO_UPDATE \
