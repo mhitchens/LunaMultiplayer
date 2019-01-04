@@ -7,6 +7,7 @@ RUN set -ex \
 && apt-get update \
 && apt-get install -y \
     tzdata \
+    wget \
     zip \
     curl \
 && curl -Ss $LMP_REPO_UPDATE \
